@@ -4,65 +4,62 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>acynox-portfolio — ACYNOX (Shaurya Solanki)</title>
-  <meta name="description" content="acynox-portfolio — ACYNOX (Shaurya Solanki): Full-stack engineer building scalable backend systems, ML prototypes, and product-first automation." />
+  <meta name="description" content="acynox-portfolio — ACYNOX (Shaurya Solanki): Full-stack engineer building scalable backend systems, ML prototypes and product-first automation." />
   <link rel="icon" href="data:;base64,iVBORw0KGgo=">
   <style>
     :root{
       --bg:#0b0f14; --card:#0f1720; --muted:#94a3b8; --accent1:#00d0ff; --accent2:#7b61ff;
       --glass: rgba(255,255,255,0.03);
       --mono: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue';
+      --radius:12px;
     }
     *{box-sizing:border-box}
     html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg),#040506);color:#e6eef6;font-family:var(--mono);-webkit-font-smoothing:antialiased}
     a{color:inherit}
-    .wrap{max-width:980px;margin:40px auto;padding:28px}
+    .wrap{max-width:1100px;margin:36px auto;padding:28px}
     .center{text-align:center}
-    h1,h2,h3{margin:0 0 8px 0}
-
-    /* Header */
-    .brand{font-weight:900;letter-spacing:0.02em;font-size:62px;line-height:1;margin:0}
-    .brand .gloss{display:inline-block;padding:6px 12px;border-radius:6px;background:linear-gradient(90deg,var(--accent2) 0%, var(--accent1) 50%);-webkit-background-clip:text;background-clip:text;color:transparent;animation:shift 5s linear infinite}
+    h1,h2,h3,h4{margin:0 0 8px 0}
+    /* header */
+    .brand{font-weight:900;letter-spacing:0.02em;font-size:64px;line-height:1;margin:0}
+    .brand .gloss{display:inline-block;padding:6px 14px;border-radius:8px;background:linear-gradient(90deg,var(--accent2) 0%, var(--accent1) 50%);-webkit-background-clip:text;background-clip:text;color:transparent;animation:shift 5s linear infinite}
     @keyframes shift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
     .tag{color:var(--muted);margin-top:10px;font-size:15px}
-
-    /* layout cards */
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:20px;margin:22px 0;box-shadow:0 6px 18px rgba(0,0,0,0.6);border:1px solid rgba(255,255,255,0.03)}
-    .two-col{display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:start}
-    @media (max-width:920px){.two-col{grid-template-columns:1fr;}.brand{font-size:44px}}
-
-    /* skills */
-    .skills-grid{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:flex-start}
-    .skill-pill{background:rgba(255,255,255,0.02);padding:8px 10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);font-size:14px;color:var(--muted)}
-
-    /* project card */
-    .project{border-radius:8px;padding:12px;background:rgba(255,255,255,0.01);border:1px solid rgba(255,255,255,0.02);margin-bottom:12px}
-    .project h4{margin:0 0 6px 0}
-
-    /* links and icons */
-    .links{display:flex;gap:12px;align-items:center;justify-content:center}
+    /* layout */
+    .two-col{display:grid;grid-template-columns:1fr 360px;gap:22px;align-items:start}
+    @media (max-width:980px){.two-col{grid-template-columns:1fr;}.brand{font-size:44px}}
+    /* cards */
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:var(--radius);padding:18px;margin:18px 0;box-shadow:0 8px 22px rgba(0,0,0,0.6);border:1px solid rgba(255,255,255,0.03)}
+    .muted{color:var(--muted);line-height:1.6}
+    /* stacks */
+    .skills-grid{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+    .skill-pill{background:rgba(255,255,255,0.02);padding:8px 10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);font-size:13px;color:var(--muted)}
+    /* projects */
+    .projects-list{display:flex;flex-direction:column;gap:12px}
+    .project{display:block;padding:12px;border-radius:10px;background:rgba(255,255,255,0.01);border:1px solid rgba(255,255,255,0.02)}
+    .project h4{margin:0 0 6px 0;color:#fff}
+    .project .desc{color:var(--muted);font-size:14px}
+    .meta{color:var(--muted);font-size:13px;margin-top:8px}
+    /* connect */
+    .links{display:flex;gap:10px;align-items:center;justify-content:center}
     .link-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:10px;background:var(--glass);border:1px solid rgba(255,255,255,0.03);text-decoration:none;color:var(--muted);font-size:14px}
-    .link-icon{display:inline-block;height:20px;width:20px}
-
+    .link-icon{display:inline-block;height:18px;width:18px}
+    /* avatar */
+    .avatar-wrap{display:flex;align-items:center;gap:12px}
+    .avatar{width:72px;height:72px;border-radius:12px;object-fit:cover;border:1px solid rgba(255,255,255,0.04)}
+    .name-block{line-height:1}
+    .small{font-size:13px;color:var(--muted)}
+    /* footer */
     footer{color:var(--muted);font-size:13px;text-align:center;margin-top:18px}
-
-    /* subtle background lines */
+    /* subtle lines */
     .bg-lines{position:fixed;inset:0;pointer-events:none;mix-blend-mode:overlay;opacity:0.05}
     .bg-lines svg{width:100%;height:100%}
-
-    /* small lists */
-    .muted{color:var(--muted)}
-    .muted a{color:var(--accent1)}
+    /* responsive tweaks */
+    @media (max-width:540px){.avatar{width:56px;height:56px}}
   </style>
 </head>
 <body>
   <div class="bg-lines" aria-hidden>
-    <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#00d0ff"/><stop offset="1" stop-color="#7b61ff"/></linearGradient></defs><rect x="0" y="0" width="100%" height="100%" fill="transparent"/>
-      <g stroke="url(#g)" stroke-width="1" opacity="0.9">
-        <path d="M0 20 H2000"/>
-        <path d="M0 120 H2000"/>
-        <path d="M0 260 H2000"/>
-      </g>
-    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#00d0ff"/><stop offset="1" stop-color="#7b61ff"/></linearGradient></defs><rect x="0" y="0" width="100%" height="100%" fill="transparent"/><g stroke="url(#g)" stroke-width="1" opacity="0.9"><path d="M0 20 H2000"/><path d="M0 120 H2000"/><path d="M0 260 H2000"/></g></svg>
   </div>
 
   <main class="wrap">
@@ -72,119 +69,138 @@
       <div class="tag">Full-Stack Engineering • Backend Systems • Scalable Architectures • Product-Oriented Development</div>
     </div>
 
-    <!-- main content: left (content) + right (summary) -->
+    <div style="height:18px"></div>
+
+    <!-- 2-column layout -->
     <div class="two-col">
+      <!-- left column (primary content) -->
       <div>
         <!-- About -->
         <section class="card">
           <h2>About</h2>
-          <p class="muted">My name is <strong>Shaurya Solanki</strong> (online: <strong>ACYNOX</strong>). I build clean, production-grade systems — with emphasis on backend architecture, performance optimisation, and products that scale. I combine a product-first mindset with engineering discipline to ship measurable impact. I'm deeply into machine learning and development, and I’m always down for a hackathon.</p>
+          <p class="muted">My name is <strong>Shaurya Solanki</strong> (online: <strong>ACYNOX</strong>). I build clean, production-grade systems — with emphasis on backend architecture, performance optimisation, and products that scale. I combine a product-first mindset with engineering discipline to ship measurable impact. I'm really into machine learning and development, and I’m always down for a hackathon.</p>
         </section>
 
-        <!-- Work Experience -->
+        <!-- Work Experience (placeholder) -->
         <section class="card">
           <h2>Work Experience</h2>
-
-          <div style="margin-top:12px">
-            <!-- Work experience will be added here -->
-            <p class="muted" style="margin:0">(Work experience will be added later)</p>
-          </div>
+          <p class="muted">(Work experience will be added later)</p>
         </section>
 
-        <!-- Projects / Case studies (PLACEHOLDERS - will populate from GitHub if you provide username) -->
+        <!-- Projects / Case studies -->
         <section class="card">
           <h2>Case Studies & Projects</h2>
+          <div id="projects" class="projects-list">
+            <!-- JS will populate projects if GITHUB_USERNAME is provided.
+                 Otherwise replace these placeholders manually. -->
+            <div class="project">
+              <h4>Micro-SaaS: Content Automation (MVP)</h4>
+              <div class="meta">Jan 2025 — MVP launched, 10 beta users</div>
+              <p class="desc">Serverless backend (FastAPI + AWS Lambda), Next.js frontend, subscription & payments. Focus: conversion funnel and retention hooks. <a href="#" target="_blank" rel="noopener">demo / repo</a></p>
+            </div>
 
-          <!-- If you give me your GitHub username I'll fetch your repo titles, descriptions and links and replace these placeholders -->
-          <div class="project">
-            <h4>Micro-SaaS: Content Automation (MVP)</h4>
-            <div class="muted">Jan 2025 — MVP launched, 10 beta users</div>
-            <p class="muted" style="margin-top:8px">Serverless backend (FastAPI + AWS Lambda), React + Next.js frontend, subscription & payments integration. Focus: conversion funnel and retention hooks. <a href="#" target="_blank" rel="noopener">demo / repo</a></p>
+            <div class="project">
+              <h4>Realtime Analytics Pipeline</h4>
+              <div class="meta">2024 — Production prototype</div>
+              <p class="desc">ETL + streaming prototype; partitioning & backpressure strategies for burst handling. <a href="#" target="_blank" rel="noopener">repo</a></p>
+            </div>
           </div>
-
-          <div class="project">
-            <h4>Realtime Analytics Pipeline</h4>
-            <div class="muted">2024 — Production prototype</div>
-            <p class="muted" style="margin-top:8px">Built ETL + streaming pipeline; designed partitioning and backpressure strategies for burst handling. <a href="#" target="_blank" rel="noopener">repo</a></p>
-          </div>
-
         </section>
 
         <!-- Hackathons -->
         <section class="card">
           <h2>Hackathons</h2>
           <ul class="muted">
-            <li>Multiple national & college hackathons — built rapid LLM + analytics prototypes (2023–2025)</li>
-            <li>Runner-up / finalist in product-focused competitions emphasizing MVP & go-to-market</li>
+            <li>Multiple national & college hackathons (2023–2025) — rapid LLM + analytics prototypes</li>
+            <li>Finalist / prize winner in product-focused competitions emphasizing MVP and go-to-market delivery</li>
           </ul>
         </section>
-
       </div>
 
-      <!-- right column: quick summary, skills, contact -->
+      <!-- right column (summary & contact) -->
       <aside>
+        <!-- profile & quick summary -->
         <section class="card">
-          <h3 style="margin-bottom:8px">Quick Summary</h3>
-          <p class="muted" style="margin:0 0 8px 0">College student & self-taught engineer. Goal: financial freedom by 30 and to build products that leave large-scale impact. Strengths: backend systems, APIs, fast iteration, and product thinking.</p>
-        </section>
-
-        <section class="card">
-          <h3 style="margin-bottom:8px">Education</h3>
-          <div class="muted">
-            <strong>K.R. Mangalam World School</strong><br/>High School — Graduated
-            <div style="height:8px"></div>
-            <strong>IIIT Delhi</strong><br/>Undergraduate degree — Admitted / attending (focused on CS & self-learning tracks)
+          <div class="avatar-wrap">
+            <img id="avatar" class="avatar" src="" alt="avatar" />
+            <div class="name-block">
+              <div style="font-weight:700">ACYNOX</div>
+              <div class="small">Shaurya Solanki — Full-stack & ML</div>
+              <div style="height:8px"></div>
+              <div class="small muted">Goal: financial freedom by 30; build high-impact products</div>
+            </div>
           </div>
         </section>
 
+        <!-- education -->
         <section class="card">
-          <h3 style="margin-bottom:8px">Skills & Frameworks</h3>
-          <div class="skills-grid" style="margin-bottom:10px">
+          <h3>Education</h3>
+          <div class="muted" style="margin-top:8px">
+            <strong>K.R. Mangalam World School</strong><br/>High School — Graduated
+            <div style="height:8px"></div>
+            <strong>IIIT Delhi</strong><br/>Undergraduate — Admitted / attending (focused on CS & self-learning)
+          </div>
+        </section>
+
+        <!-- skills -->
+        <section class="card">
+          <h3>Skills & Frameworks</h3>
+
+          <!-- row 1 -->
+          <div class="skills-grid" style="margin:12px 0 8px 0">
             <div class="skill-pill">Python</div>
             <div class="skill-pill">JavaScript</div>
             <div class="skill-pill">TypeScript</div>
             <div class="skill-pill">C++</div>
             <div class="skill-pill">Java</div>
             <div class="skill-pill">SQL</div>
-            <div class="skill-pill">React.js</div>
-            <div class="skill-pill">Next.js</div>
           </div>
 
-          <div class="skills-grid" style="margin-bottom:10px">
+          <!-- row 2 -->
+          <div class="skills-grid" style="margin-bottom:8px">
+            <div class="skill-pill">React</div>
+            <div class="skill-pill">Next.js</div>
             <div class="skill-pill">Express</div>
             <div class="skill-pill">Flask</div>
             <div class="skill-pill">Django</div>
             <div class="skill-pill">FastAPI</div>
-            <div class="skill-pill">TensorFlow</div>
-            <div class="skill-pill">PyTorch</div>
-            <div class="skill-pill">Docker</div>
-            <div class="skill-pill">Kubernetes</div>
           </div>
 
-          <div class="skills-grid" style="margin-bottom:10px">
+          <!-- row 3 -->
+          <div class="skills-grid" style="margin-bottom:8px">
+            <div class="skill-pill">TensorFlow</div>
+            <div class="skill-pill">PyTorch</div>
+            <div class="skill-pill">Scikit-learn</div>
+            <div class="skill-pill">OpenCV</div>
+            <div class="skill-pill">Pandas</div>
+            <div class="skill-pill">NumPy</div>
+          </div>
+
+          <!-- row 4 -->
+          <div class="skills-grid">
+            <div class="skill-pill">Docker</div>
+            <div class="skill-pill">Kubernetes</div>
             <div class="skill-pill">AWS</div>
             <div class="skill-pill">Postgres</div>
             <div class="skill-pill">MongoDB</div>
             <div class="skill-pill">Redis</div>
-            <div class="skill-pill">Tailwind</div>
-            <div class="skill-pill">Git</div>
-            <div class="skill-pill">VS Code</div>
           </div>
-
         </section>
 
+        <!-- positions of responsibility -->
         <section class="card">
-          <h3 style="margin-bottom:8px">Positions of Responsibility</h3>
-          <ul class="muted">
-            <li>Lead dev for college club projects (mentored juniors and organized workshops)</li>
-            <li>Mentor — ran sessions on web development and machine learning fundamentals</li>
+          <h3>Positions of Responsibility</h3>
+          <ul class="muted" style="margin-top:8px">
+            <li>Lead dev for college club projects — mentored juniors and organized workshops</li>
+            <li>Mentor — sessions on web development & ML fundamentals</li>
             <li>Volunteer coordinator for small community hackathon events</li>
           </ul>
         </section>
 
+        <!-- contact -->
         <section class="card">
-          <h3 style="margin-bottom:8px">Contact</h3>
-          <div class="links" style="flex-direction:column;gap:10px">
+          <h3>Contact</h3>
+          <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px">
             <a class="link-btn" href="mailto:ssshaurya66@gmail.com"><img class="link-icon" src="https://skillicons.dev/icons?i=gmail" alt="" /> ssshaurya66@gmail.com</a>
             <a class="link-btn" href="https://www.instagram.com/_.sshaurya_66._/" target="_blank" rel="noopener noreferrer"><img class="link-icon" src="https://skillicons.dev/icons?i=instagram" alt="" /> Instagram</a>
             <a class="link-btn" href="https://www.linkedin.com/in/shaurya-solanki-64320b374/" target="_blank" rel="noopener noreferrer"><img class="link-icon" src="https://skillicons.dev/icons?i=linkedin" alt="" /> LinkedIn</a>
@@ -194,7 +210,56 @@
       </aside>
     </div>
 
-    <footer>acynox-portfolio — Maintained by ACYNOX (Shaurya Solanki) — pursuing financial freedom and building high-impact products</footer>
+    <div style="height:20px"></div>
+
+    <footer>acynox-portfolio — Maintained by ACYNOX (Shaurya Solanki) — pursuing financial freedom & building high-impact products</footer>
   </main>
+
+  <!-- JS: optional GitHub auto-populate for projects & avatar.
+       Set GITHUB_USERNAME to your handle to fetch your public repos and avatar.
+       If you prefer not to fetch, leave empty and manually edit projects above. -->
+  <script>
+    (function(){
+      const GITHUB_USERNAME = ""; // <-- SET YOUR GITHUB USERNAME (e.g., "shaurya") or leave blank
+      const projectsNode = document.getElementById('projects');
+      const avatarImg = document.getElementById('avatar');
+
+      // default avatar (in case username not set)
+      avatarImg.src = "https://avatars.githubusercontent.com/u/583231?v=4"; // fallback octocat
+
+      if(!GITHUB_USERNAME) return;
+
+      // set avatar
+      avatarImg.src = `https://github.com/${GITHUB_USERNAME}.png?size=200`;
+
+      // fetch repos
+      fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?per_page=8&sort=updated`)
+        .then(r => r.ok ? r.json() : Promise.reject(r.status))
+        .then(repos => {
+          if(!repos || repos.length===0) return;
+          // clear placeholders
+          projectsNode.innerHTML = "";
+          repos.forEach(repo => {
+            const div = document.createElement('div');
+            div.className = 'project';
+            const name = document.createElement('h4');
+            name.textContent = repo.name;
+            const meta = document.createElement('div');
+            meta.className = 'meta';
+            meta.textContent = `${repo.language || '—'} • Updated: ${new Date(repo.updated_at).toLocaleDateString()}`;
+            const desc = document.createElement('p');
+            desc.className = 'desc';
+            desc.innerHTML = (repo.description ? repo.description : '') + ` <a href="${repo.html_url}" target="_blank" rel="noopener">repo</a>`;
+            div.appendChild(name);
+            div.appendChild(meta);
+            div.appendChild(desc);
+            projectsNode.appendChild(div);
+          });
+        })
+        .catch(err => {
+          console.warn('Failed to fetch repos', err);
+        });
+    })();
+  </script>
 </body>
 </html>
