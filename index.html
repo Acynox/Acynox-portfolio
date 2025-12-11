@@ -3,57 +3,60 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Acynox — Shaurya Solanki</title>
-  <meta name="description" content="Acynox — Shaurya Solanki | Full-stack engineer: backend systems, scalable architectures, product-focused development." />
-  <link rel="icon" href="data:;base64,iVBORw0KGgo="> 
+  <title>ACYNOX — Shaurya Solanki</title>
+  <meta name="description" content="ACYNOX (Shaurya Solanki) — Full-stack engineer: backend systems, scalable architectures, product-focused development." />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
   <style>
     :root{
       --bg:#0b0f14; --card:#0f1720; --muted:#94a3b8; --accent1:#00d0ff; --accent2:#7b61ff;
       --glass: rgba(255,255,255,0.03);
-      --mono: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue';
+      --mono: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue';
     }
     *{box-sizing:border-box}
     html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg),#040506);color:#e6eef6;font-family:var(--mono);-webkit-font-smoothing:antialiased}
+    a{color:inherit}
     .wrap{max-width:980px;margin:40px auto;padding:28px}
     .center{text-align:center}
+    h1,h2,h3{margin:0 0 8px 0}
 
-    /* Header - holographic wave style animated gradient text */
-    .brand{font-weight:800;letter-spacing:0.02em;font-size:64px;line-height:1;margin:0}
-    .brand .gloss{display:inline-block;padding:6px 12px;border-radius:6px;background:linear-gradient(90deg,var(--accent2) 0%, var(--accent1) 50%, #00ffa3 100%);-webkit-background-clip:text;background-clip:text;color:transparent;animation:shift 5s linear infinite}
+    /* Header */
+    .brand{font-weight:900;letter-spacing:0.02em;font-size:62px;line-height:1;margin:0}
+    .brand .gloss{display:inline-block;padding:6px 12px;border-radius:6px;background:linear-gradient(90deg,var(--accent2) 0%, var(--accent1) 50%);-webkit-background-clip:text;background-clip:text;color:transparent;animation:shift 5s linear infinite}
     @keyframes shift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
     .tag{color:var(--muted);margin-top:10px;font-size:15px}
 
-    /* card */
+    /* layout cards */
     .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:20px;margin:22px 0;box-shadow:0 6px 18px rgba(0,0,0,0.6);border:1px solid rgba(255,255,255,0.03)}
+    .two-col{display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:start}
+    @media (max-width:920px){.two-col{grid-template-columns:1fr;}.brand{font-size:44px}}
 
-    /* grid stacks */
-    .stacks{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
-    .stack-row{width:100%;display:flex;justify-content:center;gap:6px;align-items:center}
-    .stack-row img{height:40px;display:inline-block;border-radius:6px}
+    /* skills */
+    .skills-grid{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:flex-start}
+    .skill-pill{background:rgba(255,255,255,0.02);padding:8px 10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);font-size:14px;color:var(--muted)}
 
-    /* links */
-    .links{display:flex;gap:16px;justify-content:center;align-items:center}
-    .link-icon{height:48px;width:48px;border-radius:10px;background:var(--glass);display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.03)}
-    .link-icon img{height:26px;width:26px}
+    /* project card */
+    .project{border-radius:8px;padding:12px;background:rgba(255,255,255,0.01);border:1px solid rgba(255,255,255,0.02);margin-bottom:12px}
+    .project h4{margin:0 0 6px 0}
 
-    /* focus list */
-    .focus{display:flex;flex-direction:column;gap:8px;align-items:center}
-    .focus li{list-style:none;color:var(--muted)}
+    /* links and icons */
+    .links{display:flex;gap:12px;align-items:center;justify-content:center}
+    .link-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:10px;background:var(--glass);border:1px solid rgba(255,255,255,0.03);text-decoration:none;color:var(--muted);font-size:14px}
+    .link-icon{display:inline-block;height:20px;width:20px}
 
-    /* responsive */
-    @media (max-width:640px){.brand{font-size:40px}.wrap{padding:18px}}
+    footer{color:var(--muted);font-size:13px;text-align:center;margin-top:18px}
 
-    /* subtle motion background lines */
+    /* subtle background lines */
     .bg-lines{position:fixed;inset:0;pointer-events:none;mix-blend-mode:overlay;opacity:0.05}
     .bg-lines svg{width:100%;height:100%}
 
-    footer{color:var(--muted);font-size:13px;text-align:center;margin-top:18px}
+    /* small lists */
+    .muted{color:var(--muted)}
   </style>
 </head>
 <body>
   <div class="bg-lines" aria-hidden>
     <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#00d0ff"/><stop offset="1" stop-color="#7b61ff"/></linearGradient></defs><rect x="0" y="0" width="100%" height="100%" fill="transparent"/>
-      <g stroke="url(#g)" stroke-width="1" opacity="0.8">
+      <g stroke="url(#g)" stroke-width="1" opacity="0.9">
         <path d="M0 20 H2000"/>
         <path d="M0 120 H2000"/>
         <path d="M0 260 H2000"/>
@@ -62,56 +65,168 @@
   </div>
 
   <main class="wrap">
+    <!-- header -->
     <div class="center">
       <h1 class="brand"><span class="gloss">ACYNOX</span></h1>
-      <div class="tag">Full-Stack Engineering • Backend Systems • Scalable Architectures</div>
+      <div class="tag">Full-Stack Engineering • Backend Systems • Scalable Architectures • Product-Oriented Development</div>
     </div>
 
-    <section class="card">
-      <div class="center">
-        <h2 style="margin:0 0 10px 0">About</h2>
-        <p style="margin:0;color:var(--muted);max-width:800px;margin-left:auto;margin-right:auto;line-height:1.6">My name is <strong>Shaurya Solanki</strong> (Acynox). I build clean, production-grade software — with emphasis on backend architecture, performance optimization, and systems that scale. I combine product-first thinking with strong engineering discipline to deliver measurable impact.</p>
-      </div>
-    </section>
+    <!-- main content: left (content) + right (summary) -->
+    <div class="two-col">
+      <div>
+        <!-- About -->
+        <section class="card">
+          <h2>About</h2>
+          <p class="muted">My name is <strong>Shaurya Solanki</strong> (online: <strong>ACYNOX</strong>). I build clean, production-grade systems — with emphasis on backend architecture, performance optimisation, and products that scale. I combine a product-first mindset with engineering discipline to ship measurable impact and create side-income through automation and SaaS ideas.</p>
+        </section>
 
-    <section class="card">
-      <div class="center"><h3 style="margin:0 0 12px 0">Technical Stack</h3></div>
-      <div class="stacks">
-        <div class="stack-row"><img src="https://skillicons.dev/icons?i=python" alt="python"/><img src="https://skillicons.dev/icons?i=javascript" alt="js"/><img src="https://skillicons.dev/icons?i=typescript" alt="ts"/><img src="https://skillicons.dev/icons?i=cpp" alt="cpp"/><img src="https://skillicons.dev/icons?i=java" alt="java"/><img src="https://skillicons.dev/icons?i=c" alt="c"/></div>
-        <div class="stack-row"><img src="https://skillicons.dev/icons?i=react" alt="react"/><img src="https://skillicons.dev/icons?i=next" alt="next"/><img src="https://skillicons.dev/icons?i=nodejs" alt="node"/><img src="https://skillicons.dev/icons?i=express" alt="express"/><img src="https://skillicons.dev/icons?i=flask" alt="flask"/><img src="https://skillicons.dev/icons?i=django" alt="django"/></div>
-        <div class="stack-row"><img src="https://skillicons.dev/icons?i=fastapi" alt="fastapi"/><img src="https://skillicons.dev/icons?i=tensorflow" alt="tensorflow"/><img src="https://skillicons.dev/icons?i=pytorch" alt="pytorch"/><img src="https://skillicons.dev/icons?i=scikitlearn" alt="sklearn"/><img src="https://skillicons.dev/icons?i=keras" alt="keras"/><img src="https://skillicons.dev/icons?i=opencv" alt="opencv"/></div>
-        <div class="stack-row"><img src="https://skillicons.dev/icons?i=pandas" alt="pandas"/><img src="https://skillicons.dev/icons?i=numpy" alt="numpy"/><img src="https://skillicons.dev/icons?i=matplotlib" alt="matplotlib"/><img src="https://skillicons.dev/icons?i=seaborn" alt="seaborn"/><img src="https://skillicons.dev/icons?i=tailwind" alt="tailwind"/><img src="https://skillicons.dev/icons?i=bootstrap" alt="bootstrap"/></div>
-        <div class="stack-row"><img src="https://skillicons.dev/icons?i=chakraui" alt="chakra"/><img src="https://skillicons.dev/icons?i=redux" alt="redux"/><img src="https://skillicons.dev/icons?i=socketio" alt="socketio"/><img src="https://skillicons.dev/icons?i=git" alt="git"/><img src="https://skillicons.dev/icons?i=github" alt="github"/><img src="https://skillicons.dev/icons?i=linux" alt="linux"/></div>
-        <div class="stack-row"><img src="https://skillicons.dev/icons?i=intellij" alt="intellij"/><img src="https://skillicons.dev/icons?i=vscode" alt="vscode"/><img src="https://skillicons.dev/icons?i=figma" alt="figma"/><img src="https://skillicons.dev/icons?i=aws" alt="aws"/><img src="https://skillicons.dev/icons?i=postman" alt="postman"/><img src="https://skillicons.dev/icons?i=docker" alt="docker"/></div>
-        <div class="stack-row"><img src="https://skillicons.dev/icons?i=kubernetes" alt="k8s"/><img src="https://skillicons.dev/icons?i=mysql" alt="mysql"/><img src="https://skillicons.dev/icons?i=mongodb" alt="mongo"/><img src="https://skillicons.dev/icons?i=firebase" alt="firebase"/><img src="https://skillicons.dev/icons?i=postgres" alt="postgres"/><img src="https://skillicons.dev/icons?i=sqlite" alt="sqlite"/></div>
-        <div class="stack-row"><img src="https://skillicons.dev/icons?i=redis" alt="redis"/><img src="https://skillicons.dev/icons?i=neo4j" alt="neo4j"/></div>
-        <div class="stack-row" style="margin-top:8px;color:var(--muted);font-size:14px;">Other: PHP • SQL • OpenCV • Librosa • WebSockets • Solidity • TensorFlow Lite • GraphQL</div>
-      </div>
-    </section>
+        <!-- Work Experience -->
+        <section class="card">
+          <h2>Work Experience</h2>
 
-    <section class="card">
-      <div class="center"><h3 style="margin:0 0 12px 0">Connect</h3>
-        <div class="links">
-          <a class="link-icon" href="mailto:ssshaurya66@gmail.com" aria-label="email"><img src="https://skillicons.dev/icons?i=gmail" alt="mail"></a>
-          <a class="link-icon" href="https://www.instagram.com/_.sshaurya_66._/" target="_blank" rel="noopener noreferrer" aria-label="instagram"><img src="https://skillicons.dev/icons?i=instagram" alt="ig"></a>
-          <a class="link-icon" href="https://www.linkedin.com/in/shaurya-solanki-64320b374/" target="_blank" rel="noopener noreferrer" aria-label="linkedin"><img src="https://skillicons.dev/icons?i=linkedin" alt="li"></a>
-        </div>
-      </div>
-    </section>
+          <div style="margin-top:12px">
+            <h3 style="margin:0">Independent / Freelance</h3>
+            <div class="muted" style="font-size:14px">2024 - Present</div>
+            <p class="muted" style="margin-top:8px">Building automation & SaaS prototypes (micro-SaaS billing, content automation), freelancing on backend APIs and system optimizations. Focus: fast iteration, measurable retention, and profitable MVPs.</p>
+          </div>
 
-    <section class="card">
-      <div class="center"><h3 style="margin:0 0 12px 0">Focus Areas</h3>
-        <ul class="focus">
-          <li>Backend engineering & distributed systems</li>
-          <li>Designing scalable, stable, production-ready architectures</li>
-          <li>High-performance frontend integration</li>
-          <li>Efficient system optimization & clean engineering principles</li>
-          <li>Product-focused development with measurable impact</li>
-        </ul>
-      </div>
-    </section>
+          <hr style="border:none;height:12px"/>
 
-    <footer>Maintained by Acynox (Shaurya Solanki) — open to collaboration & opportunities</footer>
+          <div>
+            <h3 style="margin:0">Research & Projects (Academic)</h3>
+            <div class="muted" style="font-size:14px">2024 - Present</div>
+            <p class="muted" style="margin-top:8px">Exploring ML-assisted automation, data pipelines and system design. Built prototypes for analytics pipelines and real-time ingestion handling 10k events/min in test environments.</p>
+          </div>
+        </section>
+
+        <!-- Projects / Case studies -->
+        <section class="card">
+          <h2>Case Studies & Projects</h2>
+
+          <div class="project">
+            <h4>Micro-SaaS: Content Automation (MVP)</h4>
+            <div class="muted">Jan 2025 — MVP launched, 10 beta users</div>
+            <p class="muted" style="margin-top:8px">Serverless backend (FastAPI + AWS Lambda), React + Next.js frontend, subscription & payments integration. Focus: conversion funnel and retention hooks. <a href="#" style="color:var(--accent1)">(demo / repo)</a></p>
+          </div>
+
+          <div class="project">
+            <h4>Realtime Analytics Pipeline</h4>
+            <div class="muted">2024 — Production prototype</div>
+            <p class="muted" style="margin-top:8px">Built ETL + streaming pipeline using Kafka-style batching, Postgres for OLTP and Redis for fast counters. Designed partitioning and backpressure strategies to handle bursts.</p>
+          </div>
+
+          <div class="project">
+            <h4>AI Assistant for Data (Prototype)</h4>
+            <div class="muted">2024 — Ongoing</div>
+            <p class="muted" style="margin-top:8px">A small tool to query CSV/DBs using an LLM-backed agent — used for rapid analysis in hackathons and demos.</p>
+          </div>
+
+        </section>
+
+        <!-- Hackathons & Events -->
+        <section class="card">
+          <h2>Hackathons</h2>
+          <ul class="muted">
+            <li>Participated in multiple hackathons building rapid prototypes integrating LLMs and analytics (2023–2025)</li>
+            <li>Winner / finalist in local challenges focusing on product-market fit and technical delivery</li>
+          </ul>
+        </section>
+
+      </div>
+
+      <!-- right column: quick summary, skills, contact -->
+      <aside>
+        <section class="card">
+          <h3 style="margin-bottom:8px">Quick Summary</h3>
+          <p class="muted" style="margin:0 0 8px 0">College student & self-taught engineer. Goal: financial freedom before 30 via high-leverage engineering + product builds. Strengths: backend systems, APIs, fast iteration, and product thinking.</p>
+        </section>
+
+        <section class="card">
+          <h3 style="margin-bottom:8px">Education</h3>
+          <div class="muted">
+            <strong>NSUT (admitted)</strong><br/>Electrical / Tech degree — currently preparing to focus on CS & self-learning tracks.
+          </div>
+        </section>
+
+        <section class="card">
+          <h3 style="margin-bottom:8px">Skills & Frameworks</h3>
+          <!-- derived from Niket's list -->
+          <div class="skills-grid" style="margin-bottom:10px">
+            <!-- core languages -->
+            <div class="skill-pill">Python</div>
+            <div class="skill-pill">JavaScript</div>
+            <div class="skill-pill">TypeScript</div>
+            <div class="skill-pill">C++</div>
+            <div class="skill-pill">Java</div>
+            <div class="skill-pill">C</div>
+            <div class="skill-pill">SQL</div>
+            <div class="skill-pill">PHP</div>
+          </div>
+
+          <div class="skills-grid" style="margin-bottom:10px">
+            <div class="skill-pill">React.js</div>
+            <div class="skill-pill">Next.js</div>
+            <div class="skill-pill">Express.js</div>
+            <div class="skill-pill">Flask</div>
+            <div class="skill-pill">Django</div>
+            <div class="skill-pill">FastAPI</div>
+            <div class="skill-pill">Node.js</div>
+          </div>
+
+          <div class="skills-grid" style="margin-bottom:10px">
+            <div class="skill-pill">TensorFlow</div>
+            <div class="skill-pill">PyTorch</div>
+            <div class="skill-pill">Scikit-learn</div>
+            <div class="skill-pill">Keras</div>
+            <div class="skill-pill">OpenCV</div>
+            <div class="skill-pill">Librosa</div>
+            <div class="skill-pill">Pandas</div>
+            <div class="skill-pill">NumPy</div>
+          </div>
+
+          <div class="skills-grid" style="margin-bottom:10px">
+            <div class="skill-pill">Docker</div>
+            <div class="skill-pill">Kubernetes</div>
+            <div class="skill-pill">AWS</div>
+            <div class="skill-pill">Postgres</div>
+            <div class="skill-pill">MongoDB</div>
+            <div class="skill-pill">MySQL</div>
+            <div class="skill-pill">Redis</div>
+          </div>
+
+          <div class="skills-grid">
+            <div class="skill-pill">Tailwind CSS</div>
+            <div class="skill-pill">Bootstrap</div>
+            <div class="skill-pill">Chakra UI</div>
+            <div class="skill-pill">Redux</div>
+            <div class="skill-pill">Socket.io</div>
+            <div class="skill-pill">Git / GitHub</div>
+            <div class="skill-pill">VS Code</div>
+          </div>
+
+        </section>
+
+        <section class="card">
+          <h3 style="margin-bottom:8px">Positions of Responsibility</h3>
+          <ul class="muted">
+            <li>Mentor & peer mentor — organized workshops on web development and Git.</li>
+            <li>Lead web developer for college clubs and small teams.</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h3 style="margin-bottom:8px">Contact</h3>
+          <div class="links" style="flex-direction:column;gap:10px">
+            <a class="link-btn" href="mailto:ssshaurya66@gmail.com"><img class="link-icon" src="https://skillicons.dev/icons?i=gmail" alt="" /> ssshaurya66@gmail.com</a>
+            <a class="link-btn" href="https://www.instagram.com/_.sshaurya_66._/" target="_blank" rel="noopener noreferrer"><img class="link-icon" src="https://skillicons.dev/icons?i=instagram" alt="" /> Instagram</a>
+            <a class="link-btn" href="https://www.linkedin.com/in/shaurya-solanki-64320b374/" target="_blank" rel="noopener noreferrer"><img class="link-icon" src="https://skillicons.dev/icons?i=linkedin" alt="" /> LinkedIn</a>
+          </div>
+        </section>
+
+      </aside>
+    </div>
+
+    <footer>Maintained by ACYNOX (Shaurya Solanki) — pursuing financial freedom via high-leverage engineering</footer>
   </main>
 </body>
 </html>
