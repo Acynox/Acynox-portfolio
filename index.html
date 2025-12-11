@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Acynox — Shaurya Solanki</title>
+  <meta name="description" content="Acynox — Shaurya Solanki | Full-stack engineer: backend systems, scalable architectures, product-focused development." />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo="> 
+  <style>
+    :root{
+      --bg:#0b0f14; --card:#0f1720; --muted:#94a3b8; --accent1:#00d0ff; --accent2:#7b61ff;
+      --glass: rgba(255,255,255,0.03);
+      --mono: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue';
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg),#040506);color:#e6eef6;font-family:var(--mono);-webkit-font-smoothing:antialiased}
+    .wrap{max-width:980px;margin:40px auto;padding:28px}
+    .center{text-align:center}
+
+    /* Header - holographic wave style animated gradient text */
+    .brand{font-weight:800;letter-spacing:0.02em;font-size:64px;line-height:1;margin:0}
+    .brand .gloss{display:inline-block;padding:6px 12px;border-radius:6px;background:linear-gradient(90deg,var(--accent2) 0%, var(--accent1) 50%, #00ffa3 100%);-webkit-background-clip:text;background-clip:text;color:transparent;animation:shift 5s linear infinite}
+    @keyframes shift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+    .tag{color:var(--muted);margin-top:10px;font-size:15px}
+
+    /* card */
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:20px;margin:22px 0;box-shadow:0 6px 18px rgba(0,0,0,0.6);border:1px solid rgba(255,255,255,0.03)}
+
+    /* grid stacks */
+    .stacks{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+    .stack-row{width:100%;display:flex;justify-content:center;gap:6px;align-items:center}
+    .stack-row img{height:40px;display:inline-block;border-radius:6px}
+
+    /* links */
+    .links{display:flex;gap:16px;justify-content:center;align-items:center}
+    .link-icon{height:48px;width:48px;border-radius:10px;background:var(--glass);display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.03)}
+    .link-icon img{height:26px;width:26px}
+
+    /* focus list */
+    .focus{display:flex;flex-direction:column;gap:8px;align-items:center}
+    .focus li{list-style:none;color:var(--muted)}
+
+    /* responsive */
+    @media (max-width:640px){.brand{font-size:40px}.wrap{padding:18px}}
+
+    /* subtle motion background lines */
+    .bg-lines{position:fixed;inset:0;pointer-events:none;mix-blend-mode:overlay;opacity:0.05}
+    .bg-lines svg{width:100%;height:100%}
+
+    footer{color:var(--muted);font-size:13px;text-align:center;margin-top:18px}
+  </style>
+</head>
+<body>
+  <div class="bg-lines" aria-hidden>
+    <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#00d0ff"/><stop offset="1" stop-color="#7b61ff"/></linearGradient></defs><rect x="0" y="0" width="100%" height="100%" fill="transparent"/>
+      <g stroke="url(#g)" stroke-width="1" opacity="0.8">
+        <path d="M0 20 H2000"/>
+        <path d="M0 120 H2000"/>
+        <path d="M0 260 H2000"/>
+      </g>
+    </svg>
+  </div>
+
+  <main class="wrap">
+    <div class="center">
+      <h1 class="brand"><span class="gloss">ACynox</span></h1>
+      <div class="tag">Full-Stack Engineering • Backend Systems • Scalable Architectures</div>
+    </div>
+
+    <section class="card">
+      <div class="center">
+        <h2 style="margin:0 0 10px 0">About</h2>
+        <p style="margin:0;color:var(--muted);max-width:800px;margin-left:auto;margin-right:auto;line-height:1.6">My name is <strong>Shaurya Solanki</strong> (Acynox). I build clean, production-grade software — with emphasis on backend architecture, performance optimization, and systems that scale. I combine product-first thinking with strong engineering discipline to deliver measurable impact.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="center"><h3 style="margin:0 0 12px 0">Technical Stack</h3></div>
+      <div class="stacks">
+        <div class="stack-row"><img src="https://skillicons.dev/icons?i=html" alt="html"/><img src="https://skillicons.dev/icons?i=css" alt="css"/><img src="https://skillicons.dev/icons?i=js" alt="js"/><img src="https://skillicons.dev/icons?i=ts" alt="ts"/><img src="https://skillicons.dev/icons?i=react" alt="react"/><img src="https://skillicons.dev/icons?i=next" alt="next"/><img src="https://skillicons.dev/icons?i=tailwind" alt="tailwind"/></div>
+        <div class="stack-row"><img src="https://skillicons.dev/icons?i=nodejs" alt="node"/><img src="https://skillicons.dev/icons?i=express" alt="express"/><img src="https://skillicons.dev/icons?i=python" alt="python"/><img src="https://skillicons.dev/icons?i=django" alt="django"/><img src="https://skillicons.dev/icons?i=fastapi" alt="fastapi"/></div>
+        <div class="stack-row"><img src="https://skillicons.dev/icons?i=postgres" alt="postgres"/><img src="https://skillicons.dev/icons?i=mongodb" alt="mongo"/><img src="https://skillicons.dev/icons?i=mysql" alt="mysql"/><img src="https://skillicons.dev/icons?i=redis" alt="redis"/></div>
+        <div class="stack-row"><img src="https://skillicons.dev/icons?i=docker" alt="docker"/><img src="https://skillicons.dev/icons?i=linux" alt="linux"/><img src="https://skillicons.dev/icons?i=nginx" alt="nginx"/><img src="https://skillicons.dev/icons?i=git" alt="git"/><img src="https://skillicons.dev/icons?i=github" alt="github"/><img src="https://skillicons.dev/icons?i=vercel" alt="vercel"/><img src="https://skillicons.dev/icons?i=aws" alt="aws"/></div>
+        <div class="stack-row"><img src="https://skillicons.dev/icons?i=figma" alt="figma"/><img src="https://skillicons.dev/icons?i=vscode" alt="vscode"/><img src="https://skillicons.dev/icons?i=postman" alt="postman"/><img src="https://skillicons.dev/icons?i=bash" alt="bash"/></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="center"><h3 style="margin:0 0 12px 0">Connect</h3>
+        <div class="links">
+          <a class="link-icon" href="mailto:ssshaurya66@gmail.com" aria-label="email"><img src="https://skillicons.dev/icons?i=gmail" alt="mail"></a>
+          <a class="link-icon" href="https://www.instagram.com/_.sshaurya_66._/" target="_blank" rel="noopener noreferrer" aria-label="instagram"><img src="https://skillicons.dev/icons?i=instagram" alt="ig"></a>
+          <a class="link-icon" href="https://www.linkedin.com/in/shaurya-solanki-64320b374/" target="_blank" rel="noopener noreferrer" aria-label="linkedin"><img src="https://skillicons.dev/icons?i=linkedin" alt="li"></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="center"><h3 style="margin:0 0 12px 0">Focus Areas</h3>
+        <ul class="focus">
+          <li>Backend engineering & distributed systems</li>
+          <li>Designing scalable, stable, production-ready architectures</li>
+          <li>High-performance frontend integration</li>
+          <li>Efficient system optimization & clean engineering principles</li>
+          <li>Product-focused development with measurable impact</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>Maintained by Acynox (Shaurya Solanki) — open to collaboration & opportunities</footer>
+  </main>
+</body>
+</html>
